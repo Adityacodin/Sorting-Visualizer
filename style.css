@@ -1,0 +1,32 @@
+* {
+    padding : 0px;
+    margin : 0px;
+    border : 0px;
+}
+
+body, html {
+    height: 100%;
+}
+
+#sort_dashboard {
+    background-color: blue;
+    height : 100px;
+}
+
+.container {
+    display: flex;
+    height: calc(100% - 100px); /* Subtract the height of #sort_dashboard */
+}
+
+#sort_options{
+    background-color: green;
+    display:inline-block;
+    height :100%;
+    width : 300px;
+}
+
+#sort_screen{
+    background-color: red;
+    flex-grow: 1; 
+    height: 100%;
+}
