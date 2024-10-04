@@ -1,26 +1,36 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,jsonify
+from sorting import SortingModule
+
 
 app = Flask(__name__)
+sort = SortingModule()
 
 @app.route('/')
 def start():
     return render_template('index.html')
 
+@app.route('/bubble')
+def bubble_algo():
+    sort.steps.clear()
+    return jsonify(sort.bubble_sort([1,5,56,3,42,923,4]))
 
-def selection_sort(arr):
-    for i in range(len(arr)-1):
-        min_num = arr[i]
-        min_index = i
-        for j in range(len(arr)):
-            if arr[j] < min_num:
-                min_num = arr[j]
-                min_index = j
-        
-        temp = arr[min_index]
-        arr[min_index] = arr[i]
-        arr[i] = temp
-    return arr
+@app.route('/selection')
+def selection_algo():
+    sort.steps.clear()
+    return jsonify(sort.selection_sort([1,5,56,3,42,923,4]))
 
+@app.route('/insertion')
+def insertion_algo():
+    sort.steps.clear()
+    return jsonify(sort.insertion_sort([1,5,56,3,42,923,4]))
+
+@app.route('/merge')
+def merge_algo():
+    sort.steps.clear()
+    return jsonify(sort.merge_sort([1,5,56,3,42,923,4],0,6))
+
+def quick_algo():
+    pass
 
 if __name__ == "__main__":
     app.run()
