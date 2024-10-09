@@ -1,65 +1,69 @@
+
 /* locked */
 * {
-color:#caa8f5;
-padding : 0px;
-margin : 0px;
-border : 0px;
-font-weight: bolder;
-}
-/*  */
+    color : #0f454b;
+    padding : 0px;
+    margin : 0px;
+    border : 0px;
+    font-weight: bolder;
+    }
+    /*  */
+    
+    /* locked */
+    body {
+        background-color: #edf6f9;
+        position: relative;
+        min-height: 50vh;
+        text-align: center;
+    }
+    /*  */
 
-/* locked */
-body {
-    background-color: #220135;
-    position: relative;
-    min-height: 50vh;
-    text-align: center;
-}
-/*  */
+    header,#sort_menu{
+        background-color: #83c5be;
+    }
 
-/* locked */
-h1{
-    text-align : center;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-/*  */
+    
+    /* locked */
+    h1{
+        text-align : center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    /*  */
+    
+    /* locked */
+    .input{
+        display : inline-block;
+        margin-top : 20px;
+        margin-bottom : 20px;
+        margin-left : 8%;
+        margin-right:8%;
+    }
+    /*  */
+    
+    /* locked */
+    #generate_btn,#sort_btn{
+        padding: 10px 20px
+    }
+    
+    #sort_scr{
+        text-align : center;
+        display : inline-block;
+    }
+    
+    .sort_bn{
+        padding: 20px;
+        margin : 30px 50px;
+    }
+    
+    button{
+        border : solid 2px black;
+        border-radius: 15px;
+    }
+    
+    button:active{
+        background-color: #82c1c7;
+    }
 
-/* locked */
-.input{
-    display : inline-block;
-    margin-top : 20px;
-    margin-bottom : 20px;
-    margin-left : 8%;
-    margin-right:8%;
-}
-/*  */
-
-/* locked */
-#generate_btn,#sort_btn{
-    padding: 10px 20px
-}
-
-#sort_scr{
-    text-align : center;
-    background-color: white;
-    display : inline-block;
-}
-
-.sort_bn{
-    padding: 20px;
-    margin : 30px 50px;
-    border : solid 2px black;
-}
-
-button{
-    background-color: #592e83;
-    border-radius: 15px;
-}
-
-button:active{
-    background-color: #32004f;
-    color: #9cf945;
-}
-/* locked */
-
+    /* locked */
+    
