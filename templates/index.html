@@ -13,14 +13,14 @@
             <div class = 'input'>
                 <label for="size" >Size :</label>
                 <select name="size" id = "size">
-                    <option value="0.5">0.5x</option>
-                    <option value="0.75">0.75x</option>
-                    <option value="1.00">1.00x</option>
-                    <option value="2.00">2.00x</option>
-                    <option value="4.00">4.00x</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
                 </select>
             </div>
-            <button id = 'generate_btn' class = 'input'>Generate</button>
+            <button id = 'generate_btn' class = 'input' onclick = 'generate()'>Generate</button>
             <div id = 'speed_box' class = 'input'>
                 <label for="speed">Speed</label>
                 <select name="speed" id = "speed">
@@ -45,9 +45,7 @@
         <div id='sort_scr' class='screen'>Sort Screen</div>
     </content>
     <footer>
-
-
-
+        <script src = '/script/test.js'></script>
     </footer>
 </body>
 </html>
