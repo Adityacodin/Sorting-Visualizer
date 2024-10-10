@@ -7,47 +7,45 @@
     <link href = '/static/style.css' rel = 'stylesheet'>
 </head>
 <body>
-    <div id = 'sort_dashboard'>
-        <h1 id = 'logo'>Sorting Visualizer </h1>
-        <div id = 'size-block' class = 'dashboard-block>
-            <label for = 'size' name = 'size' id = 'size-label'> Size of the Array</label>
-            <select name='size' id = 'size-box'>
-                <option value = 5>5</option>
-                <option value = 10>10</option>
-                <option value = 15>15</option>
-                <option value = 25>25</option>
-                <option value = 30>30</option>
-                <option value = 50>50</option>
-                <option value = 100>100</option>
-            </select>
-        </div>
-        <button id = 'gen-arr' class = 'dashboard-block'>Generate new Array</button>
-        <div id = 'speed-block' class = 'dashboard-block'>
-        <label for = 'speed' id = 'speed-label' >Speed </label>
-        <select name = 'speed' id = 'speed-box'>
-            <option value = 0.50>0.50x</option>
-            <option value = 0.75>0.75x</option>
-            <option value = 1.00>1.00x</option>
-            <option value = 2.00>2.00x</option>
-            <option value = 4.00>4.00x</option>
-        </select>
-        </div>
-        <button id = 'sort' class='dashboard-block'>Sort</button>
-    </div>
-    <div class = 'container'>
-        <div id = 'sort_options'>
-            <!-- this part will have a button each for bubble sort,insertion sort,selection sort,quick sort,merge sort   -->
-            <button class  = 'sort-button'>Bubble Sort</button>
-            <button class  = 'sort-button'>Insertion Sort</button>
-            <button class  = 'sort-button'>Selection Sort</button>
-            <button class  = 'sort-button'>Merge Sort</button>
-            <button class  = 'sort-button'>Quick Sort</button>
-            <div id  = 'sort-doc'>
+    <header>
+        <div id = 'sort_dashboard'>
+            <h1 id  = 'logo'>Sorting Visualizer</h1>
+            <div class = 'input'>
+                <label for="size" >Size :</label>
+                <select name="size" id = "size">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
             </div>
+            <button id = 'generate_btn' class = 'input' onclick = 'generate()'>Generate</button>
+            <div id = 'speed_box' class = 'input'>
+                <label for="speed">Speed</label>
+                <select name="speed" id = "speed">
+                    <option value="0.5">0.5x</option>
+                    <option value="0.75">0.75x</option>
+                    <option value="1.00">1.00x</option>
+                    <option value="2.00">2.00x</option>
+                    <option value="4.00">4.00x</option>
+                </select>
+            </div>
+            <button id = 'sort_btn' class = 'input'>Sort</button>
         </div>
-        <div id = 'sort_screen'>
-            this part will have the screen which will show the sorting
+    </header>
+    <content>
+        <div id='sort_menu'>
+            <button id = 'bbl' class = 'sort_bn'>BUBBLE SORT</button>
+            <button id = 'sel' class = 'sort_bn'>SELECTION SORT</button>
+            <button id = 'ins' class = 'sort_bn'>INSERTION SORT</button>
+            <button id = 'mrg' class = 'sort_bn'>MERGE SORT</button>
+            <button id = 'qck' class = 'sort_bn'>QUICK SORT</button>
         </div>
-    </div>
+        <div id='sort_scr' class='screen'>Sort Screen</div>
+    </content>
+    <footer>
+        <script src = '/script/test.js'></script>
+    </footer>
 </body>
 </html>

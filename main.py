@@ -1,5 +1,6 @@
-from flask import Flask,render_template,jsonify
+from flask import Flask,request,url_for,render_template,jsonify
 from sorting import SortingModule
+from random import randint
 
 
 app = Flask(__name__)
