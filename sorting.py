@@ -75,5 +75,9 @@ class SortingModule():
             return self.steps
 
 
-    def quick_sort(self,arr):
+    def partition(self,arr,low,high):
+        pass
+
+
+    def quick_sort(self,arr,low,high):
         pass

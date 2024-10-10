@@ -29,6 +29,7 @@ def merge_algo():
     sort.steps.clear()
     return jsonify(sort.merge_sort([1,5,56,3,42,923,4],0,6))
 
+@app.route('/quick')
 def quick_algo():
     pass
 
