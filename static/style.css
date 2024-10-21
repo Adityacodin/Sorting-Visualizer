@@ -36,8 +36,8 @@
         display : inline-block;
         margin-top : 20px;
         margin-bottom : 20px;
-        margin-left : 8%;
-        margin-right:8%;
+        margin-left : 6%;
+        margin-right:6%;
     }
     /*  */
     
@@ -61,9 +61,9 @@
         border-radius: 15px;
     }
     
-    /* button:active{
-        background-color: #82c1c7;
-    } */
+    button:active{
+        color : white;
+        background-color: #0f454b;
+    }
 
-    /* locked */
     
