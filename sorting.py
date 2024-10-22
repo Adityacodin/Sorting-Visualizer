@@ -11,7 +11,7 @@ class SortingModule():
                     arr[j] = arr[j+1]
                     arr[j+1] = temp
             self.steps.append(arr.copy())
-        return self.steps
+        
 
     def selection_sort(self,arr):
         for i in range(len(arr)-1):
@@ -25,7 +25,7 @@ class SortingModule():
                 arr[i] = min_element
                 arr[min_index] = temp
             self.steps.append(arr.copy())
-        return self.steps
+        
     
     def insertion_sort(self,arr):
         for i in range(0,len(arr)):
@@ -36,7 +36,7 @@ class SortingModule():
                 arr[j-1] = temp
                 j-=1
             self.steps.append(arr.copy())
-        return self.steps
+        
 
     def merge(self,arr,low,mid,high):
         temp = []
@@ -59,7 +59,6 @@ class SortingModule():
         while right<=high:
             temp.append(arr[right])
             right+=1
-        print(low,high)
         for i in range(low,high+1):
             arr[i] = temp[i-low]
         self.steps.append(arr.copy())
@@ -71,9 +70,7 @@ class SortingModule():
         self.merge_sort(arr, low, mid)
         self.merge_sort(arr, mid+1, high)
         self.merge(arr, low, mid, high)
-        if low == 0 and high == len(arr)-1:
-            return self.steps
-
+            
 
     def partition(self,arr,low,high):
         pass
