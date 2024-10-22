@@ -6,32 +6,41 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 sort = SortingModule()
+array = None
 
 @app.route('/')
 def start():
     return render_template('index.html')
 
-@app.route('/bubble')
+
+def select_algo(algo):
+    if algo == 'bubble':
+        bubble_algo()
+    elif algo == 'selection':
+        selection_algo()
+    elif algo == 'insertion':
+        insertion_algo()
+    elif algo == 'merge':
+        merge_algo()
+    elif algo == 'quick':
+        quick_algo()
+
 def bubble_algo():
     sort.steps.clear()
-    return jsonify(sort.bubble_sort([1,5,56,3,42,923,4]))
+    sort.bubble_sort(array)
 
-@app.route('/selection')
 def selection_algo():
     sort.steps.clear()
-    return jsonify(sort.selection_sort([1,5,56,3,42,923,4]))
+    sort.selection_sort(array)
 
-@app.route('/insertion')
 def insertion_algo():
     sort.steps.clear()
-    return jsonify(sort.insertion_sort([1,5,56,3,42,923,4]))
+    sort.insertion_sort(array)
 
-@app.route('/merge')
 def merge_algo():
     sort.steps.clear()
-    return jsonify(sort.merge_sort([1,5,56,3,42,923,4],0,6))
+    sort.merge_sort(array,0,len(array)-1)
 
-@app.route('/quick')
 def quick_algo():
     pass
 
@@ -44,12 +53,15 @@ def process():
             return jsonify({'error': 'No data received'}), 400
         size = int(data.get('size'))
         algo = data.get('algo')
+        global array
         array = [randint(0, 100) for _ in range(size)]
+        select_algo(algo)
         return jsonify({
             'message': 'Data received successfully',
             # 'size': size,
             # 'algorithm': algo
-            'array' : array
+            'array' : array,
+            'sort_steps' : sort.steps
         }), 200
     except Exception as e:
         print(f"Error occurred: {e}")
