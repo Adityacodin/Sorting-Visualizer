@@ -18,8 +18,8 @@ function sendData(){
         if (response.ok) {
             return response.json().then(function (responseData) {
                 console.log("Response received:", responseData);
-                // Handle the data (e.g., animate sorting)
-                document.getElementById('sort_scr').innerHTML = responseData.array
+                bars = []
+                array = responseData.array;
             });
         } else {
             throw new Error('Something went wrong');
