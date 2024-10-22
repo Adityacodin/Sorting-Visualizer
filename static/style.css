@@ -1,5 +1,5 @@
 
-/* locked */
+
 * {
     color : #0f454b;
     padding : 0px;
@@ -7,63 +7,60 @@
     border : 0px;
     font-weight: bolder;
     }
-    /*  */
-    
-    /* locked */
-    body {
-        background-color: #edf6f9;
-        position: relative;
-        min-height: 50vh;
-        text-align: center;
-    }
-    /*  */
 
-    header,#sort_menu{
-        background-color: #83c5be;
-    }
+body {
+    background-color: #edf6f9;
+    position: relative;
+    min-height: 50vh;
+    text-align: center;
+}
 
+
+header,#sort_menu{
+    background-color: #83c5be;
+}
+
+
+h1{
+    text-align : center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.input{
+    display : inline-block;
+    margin-top : 20px;
+    margin-bottom : 20px;
+    margin-left : 6%;
+    margin-right:6%;
+}
+
+#generate_btn,#sort_btn{
+    padding: 10px 20px
+}
     
-    /* locked */
-    h1{
-        text-align : center;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-    /*  */
+#sort_scr{
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    width : 500px;
+    height : 300px;
+    margin: 0 auto;
+}
     
-    /* locked */
-    .input{
-        display : inline-block;
-        margin-top : 20px;
-        margin-bottom : 20px;
-        margin-left : 6%;
-        margin-right:6%;
-    }
-    /*  */
+.sort_bn{
+    padding: 20px;
+    margin : 30px 50px;
+}
     
-    /* locked */
-    #generate_btn,#sort_btn{
-        padding: 10px 20px
-    }
+button{
+    border : solid 2px black;
+    border-radius: 15px;
+}
     
-    #sort_scr{
-        text-align : center;
-        display : inline-block;
-    }
-    
-    .sort_bn{
-        padding: 20px;
-        margin : 30px 50px;
-    }
-    
-    button{
-        border : solid 2px black;
-        border-radius: 15px;
-    }
-    
-    button:active{
-        color : white;
-        background-color: #0f454b;
-    }
+button:active{
+    color : white;
+    background-color: #0f454b;
+}
 
     
