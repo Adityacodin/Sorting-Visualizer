@@ -40,17 +40,12 @@ h1{
 }
     
 #sort_scr{
-    background-color: white;
-    align-items: center;
-    justify-content: center;
-    width : 500px;
-    height : 300px;
-    margin: 0 auto;
-}
-    
-.sort_bn{
-    padding: 20px;
-    margin : 30px 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 200px; 
+    width: 100%;
+    border: 1px solid #ddd;
 }
     
 button{
