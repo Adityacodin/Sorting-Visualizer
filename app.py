@@ -54,13 +54,12 @@ def process():
         size = int(data.get('size'))
         algo = data.get('algo')
         global array
-        array = [randint(0, 100) for _ in range(size)]
+        array = [randint(10, 100) for _ in range(size)]
+        unsorted_array = array.copy()
         select_algo(algo)
         return jsonify({
             'message': 'Data received successfully',
-            # 'size': size,
-            # 'algorithm': algo
-            'array' : array,
+            'array' : unsorted_array,
             'sort_steps' : sort.steps
         }), 200
     except Exception as e:
