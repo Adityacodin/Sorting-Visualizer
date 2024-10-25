@@ -71,10 +71,3 @@ class SortingModule():
         self.merge_sort(arr, mid+1, high)
         self.merge(arr, low, mid, high)
             
-
-    def partition(self,arr,low,high):
-        pass
-
-
-    def quick_sort(self,arr,low,high):
-        pass
