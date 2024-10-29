@@ -42,6 +42,7 @@ function sendData() {
             bar.style.width = `${(100 / barHeight.length) - 1}%`;
             bar.style.display = 'inline-block';
             bar.style.background = '#168aad';
+            bar.innerHTML = `${height}`;
             barContainer.appendChild(bar);
         });
 
@@ -67,6 +68,7 @@ function animateSorting(steps, barContainer) {
         setTimeout(() => {
             step.forEach((height, i) => {
                 bars[i].style.height = `${height}px`;
+                bars[i].innerHTML = `${height}`
             });
         }, delay * index);
     });
